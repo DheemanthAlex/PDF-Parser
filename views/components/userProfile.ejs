@@ -1,0 +1,43 @@
+<html>
+<head>
+	<%include ./../shared/head%>
+</head>
+<body style="padding-top: 30px;">
+	<div class="container">
+		<legend>User Profile</legend>
+		<%if(errMsg){%>
+			<h4><code><%=errMsg%></code></h4>
+		<%}%>
+		<%for(var i = 0; i < users.length; i++) {%>
+		<table class="table table-striped">
+			<tr>
+				<th>Name</th>
+				<td><%= users[i].user_name %></td>
+			</tr>
+			<tr>
+				<th>Email ID</th>
+				<td><%= users[i].user_emailid %></td>
+			</tr>
+			<tr>
+				<th>DOB</th>
+				<td><%= users[i].user_dob%></td>
+			</tr>
+			<tr>
+				<th>Ph. No.</th>
+				<td><%= users[i].user_phone_number %></td>
+			</tr>
+		</table>
+		<hr>
+		<legend>List of uploaded certificates</legend>
+		<ul class="list-group">
+			<%for(var j = 0; j < users[i].user_cerificates.length; j++){%>
+			<li class="list-group-item">
+				<%=users[i].user_cerificates[j].file_name%>
+			</li>
+			<%}%>
+		</ul>
+		<%}%>
+	</div>
+	<%include ./../shared/footer_scripts%>
+</body>
+</html>

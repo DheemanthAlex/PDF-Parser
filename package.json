@@ -1,0 +1,19 @@
+{
+  "name": "pdf_parser",
+  "version": "1.0.0",
+  "description": "PDF Parser and notifier",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dheemanth Bhat",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "formidable": "^1.2.1",
+    "mongoose": "^5.2.6",
+    "nodemailer": "^4.6.7",
+    "pdf-parser": "^1.0.4"
+  }
+}
